@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $message = $_POST['message'];
     
-    $to = "lucas.bussink@student.graafschapcollege.nl"; // Replace with your email
+    $to = "lucasbussink16@gmail.com"; // Replace with your email
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\nMessage: $message";
     $headers = "From: $email";
