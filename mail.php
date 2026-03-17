@@ -1,21 +1,16 @@
 <?php
-// Email settings
+$name = htmlspecialchars($_POST["name"] ?? "");
+$email = htmlspecialchars($_POST["email"] ?? "");
+$message = htmlspecialchars($_POST["message"] ?? "");
 
+$to = "lucas.bussink@student.graafschapcollege.nl"; // zet hier je schoolmail
+$subject = "Contact formulier dinges";
+$body = "Name: $name\nEmail: $email\nMessage: $message";
+$headers = "From: noreply@lucasbussink.gc-webhosting.nl\r\n"; // Zet hier je eigen domein (niet e-mail)
+$headers .= "Reply-To: $email\r\n";
 
-  $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
-  $message = htmlspecialchars($_POST['message']);
-
-  $to = "lucasbussink16@gmail.com"; // Replace with your email
-  $subject = "Contact formulier dingetje";
-  $body = "Name: $name\nEmail: $email\nMessage: $message";
-  $headers = "From: noreply@lucasbussink.gc-webhosting.nl\r\n"; 
-  $headers .= "Reply-To: $email\r\n";
-
-  // Send email
-  if (mail($to, $subject, $body, $headers)) {
-    echo "Email sent successfully!";
-  } else {
-    echo "Failed to send email.";
-  }
-
+if (mail($to, $subject, $body, $headers)) {
+  echo "Mailtje gestuurd ouleh";
+} else {
+  echo "Niet gelukt niffo";
+}
