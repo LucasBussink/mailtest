@@ -7,7 +7,7 @@ $to = "lucas.bussink@student.graafschapcollege.nl"; // zet hier je schoolmail
 $subject = "Contact formulier dinges";
 $body = "Name: $name\nEmail: $email\nMessage: $message";
 $headers = "From: noreply@lucasbussink.gc-webhosting.nl\r\n"; // Zet hier je eigen domein (niet e-mail)
-$headers .= "Reply-To: $email\r\n";
+$headers = "Reply-To: $email\r\n";
 
 if (mail($to, $subject, $body, $headers)) {
   echo "Mailtje gestuurd ouleh";
