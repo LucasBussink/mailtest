@@ -7,7 +7,7 @@
   $message = htmlspecialchars($_POST['message']);
 
   $to = "lucasbussink16@gmail.com"; // Replace with your email
-  $subject = "New Contact Form Submission";
+  $subject = "Contact formulier dingetje";
   $body = "Name: $name\nEmail: $email\nMessage: $message";
   $headers = "From: noreply@lucasbussink.gc-webhosting.nl\r\n"; 
   $headers .= "Reply-To: $email\r\n";
