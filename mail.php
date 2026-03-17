@@ -2,9 +2,9 @@
 // Email settings
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
+  $name = htmlspecialchars($_POST['name']);
+  $email = htmlspecialchars($_POST['email']);
+  $message = htmlspecialchars($_POST['message']);
 
   $to = "lucas.bussink@student.graafschapcollege.nl"; // Replace with your email
   $subject = "New Contact Form Submission";
