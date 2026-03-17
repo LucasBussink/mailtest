@@ -6,19 +6,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $email = htmlspecialchars($_POST['email']);
   $message = htmlspecialchars($_POST['message']);
 
-  // Validate email format
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Invalid email format.";
-    exit;
-  }
-
-  $to = "lucas.bussink@student.graafschapcollege.nl";
+  $to = "lucas.bussink@student.graafschapcollege.nl"; // Replace with your email
   $subject = "New Contact Form Submission";
   $body = "Name: $name\nEmail: $email\nMessage: $message";
-  $headers = "From: " . $email . "\r\n";
-  $headers .= "Reply-To: " . $email . "\r\n";
-  $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-  
+  $headers = "From: $email";
   // Send email
   if (mail($to, $subject, $body, $headers)) {
     echo "Email sent successfully!";
