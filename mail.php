@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $to = "lucas.bussink@student.graafschapcollege.nl"; // Replace with your email
   $subject = "New Contact Form Submission";
   $body = "Name: $name\nEmail: $email\nMessage: $message";
-  $headers = "From: $email";
+  $headers = "From: lucasbussink webhosting";
   // Send email
   if (mail($to, $subject, $body, $headers)) {
     echo "Email sent successfully!";
