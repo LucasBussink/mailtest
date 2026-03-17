@@ -1,7 +1,7 @@
 <?php
-$name = htmlspecialchars($_POST["name"] ?? "er gaat wat fout kanker neger" );
-$email = htmlspecialchars($_POST["email"] ?? "er gaat wat fout kanker neger" );
-$message = htmlspecialchars($_POST["message"] ?? "er gaat wat fout kanker neger" );
+$name = htmlspecialchars($_POST["name"] ?? "er gaat wat fout" );
+$email = htmlspecialchars($_POST["email"] ?? "er gaat wat fout" );
+$message = htmlspecialchars($_POST["message"] ?? "er gaat wat fout" );
 
 $to = "lucas.bussink@student.graafschapcollege.nl"; // zet hier je schoolmail
 $subject = "Contact formulier dinges";
